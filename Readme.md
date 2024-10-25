@@ -6,8 +6,12 @@
 docker build -t nickdlk/lyprobe .
 ```
 
-## DOCKERHUB_TOKEN
+## Environment
+
+新增Environment 名称为 Build
+
+添加Secret Key为 DOCKERHUB_TOKEN Value 在[Generate Docker Hub Token](https://app.docker.com/settings/personal-access-tokens) 生成
 
 [Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions)
 
-[Generate Docker Hub Token](https://app.docker.com/settings/personal-access-tokens)
+
