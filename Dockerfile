@@ -30,5 +30,4 @@ RUN cp ./lyprobe /usr/local/bin/ \
     && cp -rd ./plugins /usr/local/lib/lyprobe/
 
 # 使用 tini 持久化进程
-ENTRYPOINT ["/tini", "--"]
-CMD ["lyprobe"]
+ENTRYPOINT ["/tini", "--","lyprobe"]
