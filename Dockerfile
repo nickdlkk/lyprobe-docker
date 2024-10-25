@@ -18,10 +18,10 @@ RUN yum update -y --nogpgcheck \
     && yum install -y --nogpgcheck wget tar mysql libpcap-devel 
 
 # 下载 ly_probe 包
-RUN wget https://github.com/Abyssal-Fish-Technology/ly_probe/releases/download/v${LYPROBE_VERSION}/lyprobe-release-v${LYPROBE_VERSION}.tar.gz
+ADD https://github.com/Abyssal-Fish-Technology/ly_probe/releases/download/v${LYPROBE_VERSION}/lyprobe-release-v${LYPROBE_VERSION}.tar.gz /lyprobe
 
 # 解压缩包
-RUN tar -zxvf lyprobe-release-v${LYPROBE_VERSION}.tar.gz
+RUN tar -zxvf lyprobe.tar.gz
 
 # 进入解压后的目录并执行安装
 WORKDIR lyprobe-release-v${LYPROBE_VERSION}
